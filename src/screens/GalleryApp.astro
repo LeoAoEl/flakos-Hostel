@@ -1,0 +1,17 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Parallax from "@components/shared/Parallax.astro";
+import PhotoSwipe from "@components/shared/PhotoSwipe.astro";
+import Title from "@components/shared/Title.astro";
+---
+
+<Layout title="Gallery App">
+  <Parallax isBackGround>
+    <p class="text-2xl text-center text-textPrimary">
+      Galería de las diversas actividades que puedes realizar al hospedarte en <span
+        class="text-naranja">Hostel Flakos</span
+      >
+    </p>
+    <PhotoSwipe imageFolder="ejemplo" />
+  </Parallax>
+</Layout>

@@ -1,0 +1,27 @@
+---
+interface Props {
+  href: string;
+  name: string;
+}
+
+const { href, name } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<li>
+  <a
+    class="text-textPrimary mx-4 text-xl leading-tight truncate font-semibold"
+    aria-label={`Ruta a ${name}`}
+    href={href}>{name}</a
+  >
+  {
+    currentPath === href ? (
+      <div
+        transition:name="menu-line"
+        class=" border-b-4 md:mx-4 border-lightBrown transition-all ease-in-out "
+      />
+    ) : (
+      <div class="border-b-4 mx-4 border-transparent" />
+    )
+  }
+</li>

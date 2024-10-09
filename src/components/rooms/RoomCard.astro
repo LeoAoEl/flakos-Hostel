@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div  class="bg-white rounded-lg shadow-md overflow-hidden">
+    <div class="relative h-48 overflow-hidden">
+      <Image
+        src={.image}
+        alt={.title}
+        layout="fill"
+        objectFit="cover"
+        class="transition-all duration-300 ease-in-out transform hover:scale-110"
+      />
+    </div>
+    <div class="p-4">
+      <div class="flex justify-between items-center mb-2">
+        <h3 class="font-semibold text-lg text-center">Titulo</h3>
+      </div>
+      <p class="text-gray-600 text-sm mb-4">lorem ipsum dolor sit amet</p>
+      <div class="flex space-x-4 mb-4">
+        {.amenities.includes("Wifi") && (
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100">
+            <Wifi class="w-5 h-5 text-gray-600" />
+          </div>
+        )}
+        {.amenities.includes("Kitchen") && (
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100">
+            <Home class="w-5 h-5 text-gray-600" />
+          </div>
+        )}
+        {.amenities.includes("TV") && (
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100">
+            <Monitor class="w-5 h-5 text-gray-600" />
+          </div>
+        )}
+        {.amenities.includes("Heating") && (
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100">
+            <Flame class="w-5 h-5 text-gray-600" />
+          </div>
+        )}
+        {.amenities.length > 4 && (
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100">
+            <span class="text-sm font-semibold text-gray-600">+{.amenities.length - 4}</span>
+          </div>
+        )}
+      </div>
+      <button class="w-full bg-gray-900 text-white py-2 rounded-md hover:bg-gray-800 transition-colors duration-300">
+        Reserve
+      </button>
+    </div>
+  </div>

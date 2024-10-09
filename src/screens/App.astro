@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Parallax from "@components/shared/Parallax.astro";
+import Mv from "@components/home/Mv.astro";
+import Contact from "@components/home/Contact.astro";
+import Cultural from "@components/home/Cultural.astro";
+import Carousel from "@components/shared/Carousel.tsx";
+import Rooms from "@components/home/Rooms.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <Parallax>
+    <Rooms />
+    <Mv />
+    <Carousel imageFolder="ejemplo" client:visible />
+  </Parallax>
+  <Cultural />
+  <Contact />
+</Layout>

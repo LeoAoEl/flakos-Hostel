@@ -1,0 +1,14 @@
+---
+// Importar los componentes correctos de Next UI
+import Layout from "@layouts/Layout.astro";
+import Parallax from "@components/shared/Parallax.astro";
+import { Exp } from "@components/experiences/Exp";
+
+// Datos de las experiencias
+---
+
+<Layout title="Experiences App">
+  <Parallax isBackGround>
+    <Exp client:visible />
+  </Parallax>
+</Layout>
