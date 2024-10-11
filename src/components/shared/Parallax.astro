@@ -2,32 +2,45 @@
 import Container from "@components/shared/Container.astro";
 interface Props {
   bgTop?: string;
-  bgBottom?: string;
   topTitle?: string;
+  topParagraph?: string;
+  bgBottom?: string;
   bottomTitle?: string;
+  bottomParagraph?: string;
   isBackGround?: boolean;
+  showContent?: boolean;
 }
 
 const {
   isBackGround = false,
+  showContent = false,
   bgBottom = " bg-abajoBG",
   bgTop = "bg-arribaBG",
+
   topTitle,
+  topParagraph,
   bottomTitle,
+  bottomParagraph,
 } = Astro.props;
 ---
 
 <header
-  class={`bg-center bg-cover bg-no-repeat  bg-fixed flex items-center justify-center h-screen pb-12 ${bgTop}`}
+  class={`bg-center bg-cover bg-no-repeat bg-fixed flex items-center justify-center h-[50vh] md:h-screen mx-auto ${bgTop}`}
 >
-  <div class="mx-auto">
-    <div
-      class="text-3xl md:text-5xl bg-backGround bg-opacity-40 backdrop-filter backdrop-blur-sm transition-all duration-300 shadow-xl rounded-xl p-4 text-center md:p-8"
-    >
-      <h1>Increible Hostel with Bungalow and Glamping rooms</h1>
-      <span>Texto de fondo que no se que poner</span>
-    </div>
-  </div>
+  {
+    showContent ? (
+      <div>
+        <div class="max-w-screen-xl gap-6 mx-auto px-8 md:px-10 py-4 lg:py-10 leading-tight bg-sandy bg-opacity-40 backdrop-filter backdrop-blur-sm flex flex-col transition-all duration-300 shadow-xl rounded-xl p-4 text-center ">
+          <h1 class=" text-2xl md:text-5xl text-textPrimary font-bold ">
+            {topTitle}
+          </h1>
+          <p class=" text-lg  md:prose-2xl text-textPrimary">{topParagraph}</p>
+        </div>
+      </div>
+    ) : (
+      ""
+    )
+  }
 </header>
 
 <Container>
@@ -37,12 +50,20 @@ const {
 {
   isBackGround ? (
     <div
-      class={`bg-center bg-cover bg-no-repeat bg-fixed flex items-center justify-center h-screen mx-auto ${bgBottom}`}
+      class={`bg-center bg-cover  bg-no-repeat bg-fixed flex items-center justify-center h-[50vh] md:h-screen mx-auto ${bgBottom}`}
     >
-      <div class="text-3xl md:text-5xl bg-backGround bg-opacity-40 backdrop-filter backdrop-blur-sm transition-all duration-300 shadow-xl rounded-xl p-4 text-center md:p-8">
-        <h1>Increible Hostel with Bungalow and Glamping rooms</h1>
-        <span>Texto de fondo que no se que poner</span>
-      </div>
+      {showContent ? (
+        <div class="max-w-screen-xl mx-auto flex flex-col gap-6 px-8 md:px-10 py-4 lg:py-10 leading-tight bg-backGround bg-opacity-40 backdrop-filter backdrop-blur-sm transition-all duration-300 shadow-xl rounded-xl p-4 text-center md:p-8">
+          <span class="text-2xl md:text-5xl text-textPrimary font-bold">
+            {bottomTitle}
+          </span>
+          <p class=" text-lg md:prose-2xl  leading-tight text-textPrimary">
+            {bottomParagraph}
+          </p>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   ) : (
     ""

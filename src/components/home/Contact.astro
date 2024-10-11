@@ -1,20 +1,24 @@
 ---
 import Container from "@components/shared/Container.astro";
+import { getI18N } from "@i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { title, description, note, form } = i18n.Home.contact;
 ---
 
 <section
-  class="min-h-screen bg-gradient-to-r from-lightBrown via-darkBlue to-lightBrown pt-6"
+  class="min-h-screen bg-gradient-to-b from-textPrimary via-azulOcean to-sandy pt-6"
 >
   <Container>
     <div class="flex-1 lg:flex lg:items-center lg:-mx-6 place-content-center">
       <div class="text-white lg:w-1/2 lg:mx-6">
         <h1 class="text-2xl font-semibold capitalize lg:text-6xl text-white">
-          ¡Contact us!
+          {title}
         </h1>
 
         <p class="max-w-xl mt-6 text-xl">
-          We want you to live the experience and beauty that Playa Blanca has
-          for you.
+          {description}
         </p>
 
         <div class="mt-6 space-y-8 md:mt-8">
@@ -102,7 +106,7 @@ import Container from "@components/shared/Container.astro";
         </div>
 
         <div class="mt-6 md:mt-8">
-          <span class="text-white text-2xl">Follow us</span>
+          <span class="text-white text-2xl">{note}</span>
 
           <div class="flex mt-4 -mx-1.5">
             <a
@@ -165,46 +169,46 @@ import Container from "@components/shared/Container.astro";
         <div
           class="w-full px-8 py-10 drop-shadow-2xl bg-form mx-auto overflow-hidden shadow-2xl rounded-xl lg:max-w-xl"
         >
-          <h1 class="text-xl font-medium text-white">Contact form</h1>
+          <h1 class="text-xl font-medium text-white">{form.title}</h1>
 
           <form class="mt-4 text-white">
             <div class="flex-1">
-              <label class="block mb-2 text-sm">Full Name</label>
+              <label class="block mb-2 text-sm">{form.name}</label>
               <input
                 type="text"
                 placeholder="John Doe"
-                class="block w-full px-5 py-3 mt-2 text-textColor bg-background border rounded-md dark:border-naranja/90 focus:border-naranja focus:ring-naranja focus:ring-opacity-40 focus:outline-none focus:ring"
+                class="block w-full px-5 py-3 mt-2 text-textPrimary bg-sandy border rounded-md dark:border-textPrimary/90 focus:border-textPrimary focus:ring-texborder-textPrimary focus:ring-opacity-40 focus:outline-none focus:ring"
               />
             </div>
             <div class="flex-1 mt-6">
-              <label class="block mb-2 text-sm">Phone number</label>
+              <label class="block mb-2 text-sm">{form.phone}</label>
               <input
                 type="number"
                 placeholder="1241256"
-                class="block w-full px-5 py-3 mt-2 text-textColor bg-background border rounded-md dark:border-naranja/90 focus:border-naranja focus:ring-naranja focus:ring-opacity-40 focus:outline-none focus:ring"
+                class="block w-full px-5 py-3 mt-2 text-textPrimary bg-sandy border rounded-md dark:border-textPrimary/90 focus:border-textPrimary focus:ring-texborder-textPrimary focus:ring-opacity-40 focus:outline-none focus:ring"
               />
             </div>
 
             <div class="flex-1 mt-6">
-              <label class="block mb-2 text-sm">Email address</label>
+              <label class="block mb-2 text-sm">{form.email}</label>
               <input
                 type="email"
                 placeholder="johndoe@example.com"
-                class="block w-full px-5 py-3 mt-2 text-textColor bg-background border rounded-md dark:border-naranja/90 focus:border-naranja focus:ring-naranja focus:ring-opacity-40 focus:outline-none focus:ring"
+                class="block w-full px-5 py-3 mt-2 text-textPrimary bg-sandy border rounded-md dark:border-textPrimary/90 focus:border-textPrimary focus:ring-texborder-textPrimary focus:ring-opacity-40 focus:outline-none focus:ring"
               />
             </div>
 
             <div class="w-full mt-6">
-              <label class="block mb-2 text-sm">Message</label>
+              <label class="block mb-2 text-sm">{form.message}</label>
               <textarea
-                class="block w-full px-5 py-3 mt-2 text-textColor bg-background border rounded-md dark:border-naranja/90 focus:border-naranja focus:ring-naranja focus:ring-opacity-40 focus:outline-none focus:ring"
+                class="block w-full px-5 py-3 mt-2 text-textPrimary bg-sandy border rounded-md dark:border-textPrimary/90 focus:border-textPrimary focus:ring-texborder-textPrimary focus:ring-opacity-40 focus:outline-none focus:ring"
                 placeholder="Message"></textarea>
             </div>
 
             <button
-              class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform shadow-2xl bg-darkBlue rounded-md focus:ring-opacity-50"
+              class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide hover:text-white capitalize transition-all text-textPrimary duration-300 transform shadow-2xl bg-sandy hover:bg-textPrimary rounded-md focus:ring-opacity-50"
             >
-              Submit
+              {form.submit}
             </button>
           </form>
         </div>

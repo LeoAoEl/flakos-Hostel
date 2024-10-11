@@ -22,15 +22,15 @@ export const Exp = () => {
 
   return (
     <section className=" py-10">
-      <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+      <h2 className="text-4xl font-bold text-center text-textPrimary mb-12">
         Experiencias en nuestro hostel
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {experiencias.map((experiencia) => (
           <div
             key={experiencia.title}
-            className="bg-lightBlue shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 cursor-pointer"
+            className="bg-azulCielo shadow-lg rounded-lg p-6 transition-transform duration-300 hover:scale-105 cursor-pointer"
             onClick={() => openModal(experiencia)} // Abrir modal con la experiencia seleccionada
           >
             <img
@@ -38,10 +38,10 @@ export const Exp = () => {
               alt={experiencia.title}
               className="h-48 w-full object-cover rounded-md mb-4"
             />
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            <h3 className="text-2xl font-semibold text-textPrimary mb-4">
               {experiencia.title}
             </h3>
-            <p className="text-gray-600">{experiencia.description}</p>
+            <p className="text-textPrimary">{experiencia.description}</p>
           </div>
         ))}
       </div>
@@ -77,7 +77,7 @@ export const Exp = () => {
           {(onClose) => (
             <>
               <ModalHeader>
-                <h3 className="text-2xl font-semibold text-gray-800">
+                <h3 className="text-2xl font-semibold text-textPrimary">
                   {activeExperience?.title}
                 </h3>
               </ModalHeader>
@@ -95,17 +95,14 @@ export const Exp = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-600 mt-4">
+                <p className="text-textPrimary mt-4">
                   {activeExperience?.details}
                 </p>
               </ModalBody>
 
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
-                <Button color="primary" onPress={onClose}>
-                  Action
+                  Cerrar
                 </Button>
               </ModalFooter>
             </>

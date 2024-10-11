@@ -6,14 +6,20 @@ import Contact from "@components/home/Contact.astro";
 import Cultural from "@components/home/Cultural.astro";
 import Carousel from "@components/shared/Carousel.tsx";
 import Rooms from "@components/home/Rooms.astro";
+
+import { getI18N } from "@i18n/index";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { title, description } = i18n.Home;
 ---
 
 <Layout title="Welcome to Astro.">
-  <Parallax>
+  <Parallax showContent topTitle={title} topParagraph={description}>
     <Rooms />
     <Mv />
     <Carousel imageFolder="ejemplo" client:visible />
   </Parallax>
   <Cultural />
+  <div class="py-10"></div>
   <Contact />
 </Layout>

@@ -2,6 +2,12 @@
 import { ViewTransitions } from "astro:transitions";
 import Navbar from "@components/Navbar.astro";
 import Footer from "@components/Footer.astro";
+
+import { getI18N } from "@i18n/index";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const {} = i18n.SEO;
+
 interface Props {
   title: string;
 }
@@ -10,7 +16,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />

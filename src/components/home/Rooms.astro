@@ -1,46 +1,53 @@
 ---
 import Title from "@components/shared/Title.astro";
+
+import { getI18N } from "@i18n/index";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { title, buttonD, bungalows, glampings } = i18n.Home.rooms;
 const cabins = [
   {
-    name: "Casa",
+    name: bungalows.title,
     image:
       "https://images.unsplash.com/photo-1483190656465-2c49e54d29f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Reemplaza con el path correcto de tu imagen
-    description:
-      "Disfruta de una estadía relajante en nuestra acogedora casa con todas las comodidades necesarias.",
-    link: "/casa",
+    description: bungalows.description,
+    link: "/rooms/",
   },
   {
-    name: "Cabaña",
+    name: glampings.title,
     image:
       "https://images.unsplash.com/photo-1520260022311-3babdaa7d71e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Reemplaza con el path correcto de tu imagen
-    description:
-      "Explora la naturaleza mientras te hospedas en nuestra rústica pero cómoda cabaña.",
-    link: "/cabana",
+    description: glampings.description,
+    link: "/rooms/",
   },
 ];
 ---
 
-<section class="py-10">
+<section>
   <div class="mx-auto text-center flex flex-col">
-    <Title title="Tipos de Habitaciones" />
+    <Title title={title} />
+
     <div class="grid md:grid-cols-2 gap-8 grid-cols-1">
       {
         cabins.map((cabin) => (
-          <div class="relative group rounded-lg overflow-hidden transition-all">
+          <div class="relative group rounded-lg overflow-hidden transition-all ">
             <div class="overflow-hidden rounded-lg shadow-lg">
               <img
                 src={cabin.image}
                 alt={cabin.name}
-                class="w-full h-96 object-cover transform transition-transform duration-300 group-hover:scale-110"
+                class="w-full h-96 object-cover transform transition-all duration-300 group-hover:scale-110"
               />
-              <div class="absolute inset-0 bg-gray-900 bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
-                <h3 class="text-2xl font-semibold mb-2">{cabin.name}</h3>
-                <p class="text-gray-200 mb-4">{cabin.description}</p>
+              <div
+                class="absolute inset-0 bg-slate-800 bg-opacity-60 opacity-0
+               group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center items-center text-white p-4"
+              >
+                <h3 class="text-2xl font-semibold mb-2 ">{cabin.name}</h3>
+                <p class="text-gray-200 mb-4 prose">{cabin.description}</p>
                 <a
                   href={cabin.link}
-                  class="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                  class="inline-block bg-textPrimary/75 text-white px-4 py-2 rounded-lg hover:bg-textPrimary transition-colors"
                 >
-                  Más información
+                  {buttonD}
                 </a>
               </div>
             </div>

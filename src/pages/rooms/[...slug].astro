@@ -1,0 +1,63 @@
+---
+import Container from "@components/shared/Container.astro";
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import Return from "@components/shared/Return.astro";
+
+export async function getStaticPaths() {
+  const rooms = await getCollection("rooms");
+  const paths = rooms.map((room) => {
+    return {
+      params: {
+        slug: room.slug,
+      },
+      props: { room },
+    };
+  });
+  return paths;
+}
+const { room } = Astro.props;
+const { data, slug } = room;
+const { title, image, type, description, prices, amenities } = data;
+---
+
+<Layout title={title}>
+  <Container>
+    <Return />
+    <div class="flex flex-col items-center justify-center">
+      <Image
+        class="w-full md:min-h-80 h-auto object-cover transform transition-all duration-500 ease-in-out"
+        alt="House image"
+        src={image}
+        quality={"low"}
+        loading={"eager"}
+        transition:name={`image ${slug}`}
+      />
+      <h1 class="text-center text-4xl font-bold">{title}</h1>
+      <p class="text-center text-xl font-thin">{type}</p>
+      <p class="text-center text-xl font-thin">{description}</p>
+      <div class="flex flex-col gap-4 items-center">
+        <h2 class="text-center text-2xl font-bold">Prices</h2>
+        <div class="flex flex-col gap-2 items-center">
+          <p class="text-center text-xl font-thin">Peak</p>
+          <p class="text-center text-2xl font-bold">
+            {prices.peak}
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <p class="text-center text-xl font-thin">Regular</p>
+          <p class="text-center text-2xl font-bold">
+            {prices.regular}
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <p class="text-center text-xl font-thin">Special</p>
+          <p class="text-center text-2xl font-bold">
+            {prices.special}
+          </p>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

@@ -1,0 +1,62 @@
+{
+    "SEO": {},
+    "Home": {
+        "title": "Welcome to Flakos Hostel – Your Paradise Awaits",
+        "description": " Playa Blanca, Guerrero, offers affordable stays in bungalows and glamping. Enjoy the beach, explore nature, and be part of our mission to help shelter dogs.",
+        "rooms": {
+            "title": "All Rooms",
+            "buttonD": "More information",
+            "bungalows": {
+                "title": "Bungalows",
+                "description": "Our bungalows offer a cozy and peaceful retreat just steps from the beach, with rustic decor, comfortable beds, and private bathrooms. Perfect for couples or small families seeking relaxation."
+            },
+            "glampings": {
+                "title": "Glampings",
+                "description": "Experience nature with comfort in our spacious glamping tents, combining the adventure of camping with the luxury of cozy bedding and modern amenities. Ideal for eco-conscious travelers."
+            }
+        },
+        "mivi": {
+            "title": "Our Mission and Vision",
+            "Mititle": "Our Mission",
+            "Mibody": "Hostel Flakos mission is to show our guests the beauty and variety of playa blanca for affordable prices! Our idea is to help the dogs getting more love or even adopted. Also taking care of the puppies of the shelter so guests can play and train them to become good dogs.",
+            "Vititle": "Our Vision",
+            "Vibody": "Located in the picturesque perfect paradise of Playa Blanca, Guerrero, Mexico, Hostel Flakos is merely 5 minutes from one of the best surf breaks in the area. Excellent free diving, snorkeling, fishing, paddle boarding, whale watching, kayaking, birdwatching, nearby archeological sites and of course beach bumming. The best part of all…the public entrance to the beach is just across the street!"
+        },
+        "cultural": {
+            "title": "Cultural exchange",
+            "body": "Nestled in the heart of Zihuatanejo, Guerrero, Hostal Flakos offers travelers a unique blend of comfort and local charm. With its cozy, colorful rooms and welcoming atmosphere, it’s the perfect spot for those looking to unwind and enjoy the beauty of Mexico's Pacific coast. Just minutes away from pristine beaches, local markets, and vibrant street life, this charming hostal provides the ideal base for exploring the area. Guests can enjoy a relaxing stay with friendly service, delicious local cuisine, and stunning views of the ocean, creating unforgettable memories."
+        },
+        "contact": {
+            "title": "¡Contact Us!",
+            "description": "We want you to live the experience and beauty that Playa Blanca has for you.",
+            "note": "Follow us",
+            "form": {
+                "title": "Contact form",
+                "name": "Full name",
+                "phone": "Phone number",
+                "email": "Email address",
+                "message": "Message",
+                "submit": "Send"
+            }
+        }
+    },
+    "Rooms": {
+        "title": "Rooms",
+        "topTitle": "Explore Your Stay",
+        "topDescription": "Explore our rooms and enjoy the beach, nature, and the best of Playa Blanca.",
+        "bottomTitle": "Welcome to Your Paradise",
+        "bottomDescription": "We invite you to relax in our serene spaces, where the ocean breeze and tranquility meet."
+    },
+    "About": {
+        "topTitle": "About Flakos Hostel",
+        "topDescription": "Discover the perfect blend of relaxation and adventure at Flakos Hostel. Nestled along the serene shores of Playa Blanca, we offer a unique stay combining comfort, nature, and community. Join us in creating memories by the beach while supporting our mission to care for local shelter dogs.",
+        "bottomTitle": "Experience Flakos",
+        "bottomDescription": "From cozy bungalows to eco-friendly glamping, Flakos Hostel provides a diverse range of accommodations. Whether you're here to surf, explore, or unwind, our beachfront location and commitment to sustainability will make your stay unforgettable."
+    },
+    "Gallery": {
+        "topTitle": "Experience Flakos Hostel",
+        "topDescription": "Explore a variety of activities at Flakos Hostel through our photo gallery. Whether it's surfing, yoga, or sunset walks on Playa Blanca, there's something for everyone. Dive into the adventure, relax by the ocean, and enjoy all that our hostel and surroundings have to offer.",
+        "bottomTitle": "A Glimpse of Our Adventures",
+        "bottomDescription": "From morning surf sessions to evening bonfires, our gallery captures the spirit of Flakos Hostel. Take a look at the unforgettable moments and experiences you can be part of during your stay."
+    }
+}

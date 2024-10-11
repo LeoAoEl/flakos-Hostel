@@ -2,7 +2,11 @@
 import { Image } from "astro:assets";
 import fondo from "@assets/images/View.avif";
 import Container from "@components/shared/Container.astro";
-import Title from "@components/shared/Title.astro";
+
+import { getI18N } from "@i18n/index";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { title, body } = i18n.Home.cultural;
 ---
 
 <div class="relative mb-40 md:mb-28">
@@ -18,21 +22,14 @@ import Title from "@components/shared/Title.astro";
     className="absolute inset-x-0 bottom-0 md:mx-auto transform mx-8  translate-y-1/2 bg-white rounded-xl p-4 md:p-6 lg:p-8 shadow-lg"
   >
     <h2
-      class="text-center text-xl md:text-2xl lg:text-3xl font-semibold text-gray-700 uppercase tracking-widest"
+      class="text-center text-xl md:text-2xl lg:text-3xl font-semibold text-textPrimary uppercase tracking-widest"
     >
-      Cultural exchange
+      {title}
     </h2>
     <p
       class="mt-2 md:mt-4 text-textPrimary text-xs md:text-base lg:text-lg leading-relaxed text-center"
     >
-      Nestled in the heart of Zihuatanejo, Guerrero, Hostal Flakos offers
-      travelers a unique blend of comfort and local charm. With its cozy,
-      colorful rooms and welcoming atmosphere, it’s the perfect spot for those
-      looking to unwind and enjoy the beauty of Mexico's Pacific coast. Just
-      minutes away from pristine beaches, local markets, and vibrant street
-      life, this charming hostal provides the ideal base for exploring the area.
-      Guests can enjoy a relaxing stay with friendly service, delicious local
-      cuisine, and stunning views of the ocean, creating unforgettable memories.
+      {body}
     </p>
   </Container>
 </div>

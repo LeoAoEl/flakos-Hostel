@@ -3,11 +3,24 @@ import Layout from "@layouts/Layout.astro";
 import Parallax from "@components/shared/Parallax.astro";
 import Mv from "@components/home/Mv.astro";
 import Contact from "@components/home/Contact.astro";
+import ExpSwipper from "@components/ExpSwipper";
+import { getI18N } from "@i18n/index";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { topTitle, topDescription, bottomTitle, bottomDescription } = i18n.About;
 ---
 
 <Layout title="About App">
-  <Parallax>
+  <Parallax
+    showContent
+    isBackGround
+    topTitle={topTitle}
+    topParagraph={topDescription}
+    bottomTitle={bottomTitle}
+    bottomParagraph={bottomDescription}
+  >
     <Mv />
+    <!-- <ExpSwipper client:visible /> -->
   </Parallax>
   <Contact />
 </Layout>

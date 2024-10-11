@@ -1,0 +1,62 @@
+{
+    "SEO": {},
+    "Home": {
+        "title": "Bienvenido a Flakos Hostel – Tu Paraíso Te Espera",
+        "description": "Playa Blanca, Guerrero, ofrece estancias asequibles en bungalows y glamping. Disfruta de la playa, explora la naturaleza y sé parte de nuestra misión para ayudar a los perros sin hogar.",
+        "rooms": {
+            "title": "Todas las Habitaciones",
+            "buttonD": "Más información",
+            "bungalows": {
+                "title": "Bungalows",
+                "description": "Nuestros bungalows ofrecen un refugio acogedor y tranquilo a solo unos pasos de la playa, con decoración rústica, camas cómodas y baños privados. Perfecto para parejas o pequeñas familias que buscan relajación."
+            },
+            "glampings": {
+                "title": "Glampings",
+                "description": "Experimenta la naturaleza con comodidad en nuestras amplias tiendas de glamping, combinando la aventura del camping con el lujo de camas acogedoras y comodidades modernas. Ideal para viajeros conscientes del medio ambiente."
+            }
+        },
+        "mivi": {
+            "title": "Nuestra Misión y Visión",
+            "Mititle": "Nuestra Misión",
+            "Mibody": "La misión de Hostel Flakos es mostrar a nuestros huéspedes la belleza y variedad de Playa Blanca a precios accesibles. Nuestra idea es ayudar a los perros a recibir más amor o incluso ser adoptados. También cuidamos a los cachorros del refugio para que los huéspedes puedan jugar y entrenarlos para que sean buenos perros.",
+            "Vititle": "Nuestra Visión",
+            "Vibody": "Ubicado en el pintoresco paraíso perfecto de Playa Blanca, Guerrero, México, Hostel Flakos está a solo 5 minutos de uno de los mejores puntos de surf en la zona. Excelentes opciones de buceo libre, esnórquel, pesca, paddle boarding, avistamiento de ballenas, kayak, observación de aves, sitios arqueológicos cercanos y, por supuesto, disfrutar de la playa. ¡Lo mejor de todo... la entrada pública a la playa está justo al otro lado de la calle!"
+        },
+        "cultural": {
+            "title": "Intercambio Cultural",
+            "body": "Ubicado en el corazón de Zihuatanejo, Guerrero, Hostal Flakos ofrece a los viajeros una combinación única de comodidad y encanto local. Con sus acogedoras y coloridas habitaciones y su ambiente cálido, es el lugar perfecto para quienes buscan relajarse y disfrutar de la belleza de la costa del Pacífico de México. A solo minutos de playas prístinas, mercados locales y vibrante vida callejera, este encantador hostal ofrece la base ideal para explorar la zona. Los huéspedes pueden disfrutar de una estancia relajante con un servicio amigable, deliciosa comida local y vistas impresionantes del océano, creando recuerdos inolvidables."
+        },
+        "contact": {
+            "title": "¡Contáctanos!",
+            "description": "Queremos que vivas la experiencia y la belleza que Playa Blanca tiene para ti.",
+            "note": "Síguenos",
+            "form": {
+                "title": "Formulario de contacto",
+                "name": "Nombre completo",
+                "phone": "Número de teléfono",
+                "email": "Dirección de correo electrónico",
+                "message": "Mensaje",
+                "submit": "Enviar"
+            }
+        }
+    },
+    "Rooms": {
+        "title": "Habitaciones",
+        "topTitle": "Explora Tu Estancia",
+        "topDescription": "Explora nuestras habitaciones y disfruta de la playa, la naturaleza, y lo mejor de Playa Blanca.",
+        "bottomTitle": "Bienvenido a Tu Paraíso",
+        "bottomDescription": "Te invitamos a relajarte en nuestros espacios serenos, donde la brisa del océano y la tranquilidad se encuentran."
+    },
+    "About": {
+        "topTitle": "Sobre Flakos Hostel",
+        "topDescription": "Descubre la mezcla perfecta de relajación y aventura en Flakos Hostel. Ubicado en las tranquilas orillas de Playa Blanca, ofrecemos una estancia única que combina comodidad, naturaleza y comunidad. Únete a nosotros para crear recuerdos junto a la playa mientras apoyas nuestra misión de cuidar a los perros del refugio local.",
+        "bottomTitle": "Vive la experiencia Flakos",
+        "bottomDescription": "Desde acogedores bungalows hasta glamping ecológico, Flakos Hostel ofrece una amplia variedad de alojamientos. Ya sea que estés aquí para surfear, explorar o relajarte, nuestra ubicación frente al mar y nuestro compromiso con la sostenibilidad harán que tu estancia sea inolvidable."
+    },
+    "Gallery": {
+        "topTitle": "Vive la experiencia Flakos Hostel",
+        "topDescription": "Explora una variedad de actividades en Flakos Hostel a través de nuestra galería de fotos. Ya sea surf, yoga o paseos al atardecer en Playa Blanca, hay algo para todos. Sumérgete en la aventura, relájate junto al mar y disfruta de todo lo que nuestro hostel y alrededores tienen para ofrecer.",
+        "bottomTitle": "Un Vistazo a Nuestras Aventuras",
+        "bottomDescription": "Desde sesiones de surf por la mañana hasta fogatas al atardecer, nuestra galería captura el espíritu de Flakos Hostel. Echa un vistazo a los momentos inolvidables y experiencias de las que puedes ser parte durante tu estancia."
+    }
+}
