@@ -2,9 +2,9 @@
 import Container from "@components/shared/Container.astro";
 interface Props {
   bgTop?: string;
+  bgBottom?: string;
   topTitle?: string;
   topParagraph?: string;
-  bgBottom?: string;
   bottomTitle?: string;
   bottomParagraph?: string;
   isBackGround?: boolean;
@@ -14,7 +14,7 @@ interface Props {
 const {
   isBackGround = false,
   showContent = false,
-  bgBottom = " bg-abajoBG",
+  bgBottom = "bg-abajoBG",
   bgTop = "bg-arribaBG",
 
   topTitle,

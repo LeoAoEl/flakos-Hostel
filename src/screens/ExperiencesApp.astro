@@ -1,14 +1,29 @@
 ---
-// Importar los componentes correctos de Next UI
 import Layout from "@layouts/Layout.astro";
 import Parallax from "@components/shared/Parallax.astro";
-import { Exp } from "@components/experiences/Exp";
-
-// Datos de las experiencias
+import Title from "@components/shared/Title.astro";
+import ExpSwipper from "@components/ExpSwipper";
+import { Experiencias } from "@components/experiences/Exp";
+import { getI18N } from "@i18n/index";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { topTitle, topDescription, bottomTitle, bottomDescription } =
+  i18n.Experiences;
+const { Content } = i18n.Experiences;
 ---
 
 <Layout title="Experiences App">
-  <Parallax isBackGround>
-    <Exp client:visible />
+  <Parallax
+    bgTop="bg-ExpTopBG"
+    bgBottom="bg-ExpBottomBG"
+    isBackGround
+    showContent
+    topTitle={topTitle}
+    topParagraph={topDescription}
+    bottomTitle={bottomTitle}
+    bottomParagraph={bottomDescription}
+  >
+    <Experiencias client:visible />
+    <ExpSwipper client:visible content={Content} />
   </Parallax>
 </Layout>

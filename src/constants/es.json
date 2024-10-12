@@ -53,10 +53,52 @@
         "bottomTitle": "Vive la experiencia Flakos",
         "bottomDescription": "Desde acogedores bungalows hasta glamping ecológico, Flakos Hostel ofrece una amplia variedad de alojamientos. Ya sea que estés aquí para surfear, explorar o relajarte, nuestra ubicación frente al mar y nuestro compromiso con la sostenibilidad harán que tu estancia sea inolvidable."
     },
-    "Gallery": {
+    "Experiences": {
         "topTitle": "Vive la experiencia Flakos Hostel",
         "topDescription": "Explora una variedad de actividades en Flakos Hostel a través de nuestra galería de fotos. Ya sea surf, yoga o paseos al atardecer en Playa Blanca, hay algo para todos. Sumérgete en la aventura, relájate junto al mar y disfruta de todo lo que nuestro hostel y alrededores tienen para ofrecer.",
         "bottomTitle": "Un Vistazo a Nuestras Aventuras",
-        "bottomDescription": "Desde sesiones de surf por la mañana hasta fogatas al atardecer, nuestra galería captura el espíritu de Flakos Hostel. Echa un vistazo a los momentos inolvidables y experiencias de las que puedes ser parte durante tu estancia."
+        "bottomDescription": "Desde sesiones de surf por la mañana hasta fogatas al atardecer, nuestra galería captura el espíritu de Flakos Hostel. Echa un vistazo a los momentos inolvidables y experiencias de las que puedes ser parte durante tu estancia.",
+        "Content": [
+            {
+                "title": "Nadar",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/h7ewzr2xooa6rl1dtxdp.avif",
+                "desc": "Disfruta de un refrescante baño en las aguas cristalinas del Océano Pacífico. Ya sea que seas un nadador experto o solo busques refrescarte, nuestra playa ofrece el lugar perfecto para relajarte y disfrutar del mar."
+            },
+            {
+                "title": "Surfear",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/di3swu1azqan09damoie.avif",
+                "desc": "Atrapa la ola perfecta en uno de los spots de surf más populares de la costa oaxaqueña. Ya seas principiante o profesional, encontrarás las condiciones ideales para surfear y mejorar tus habilidades."
+            },
+            {
+                "title": "Snorkel",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/gxg9pxuidem2iqwlz3lf.avif",
+                "desc": "Explora el mundo submarino haciendo snorkel. Descubre arrecifes de coral vibrantes, peces tropicales y otra vida marina a solo unos pasos de la orilla."
+            },
+            {
+                "title": "Yoga en la Playa",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/t2b0sjua7u4uskeb9qhq.avif",
+                "desc": "Comienza tu día con una relajante sesión de yoga en la playa. Con el sonido de las olas y la brisa del océano, es la manera perfecta de reconectar contigo mismo y con la naturaleza."
+            },
+            {
+                "title": "Voleibol de Playa",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/blckyvl3usrp0vjwx7h3.avif",
+                "desc": "Únete a un divertido juego de voleibol de playa con otros huéspedes. Es una excelente manera de divertirte, mantenerte activo y hacer nuevos amigos durante tu estancia."
+            },
+            {
+                "title": "Pesca",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/twdsxy37hjbvrxmfbuvr.avif",
+                "desc": "Vive la experiencia de la pesca tradicional en la costa oaxaqueña. Nuestros guías locales te mostrarán los mejores lugares y técnicas para pescar como un profesional."
+            },
+            {
+                "title": "Ver el Atardecer",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/asyojdeatmykofzciyxq.avif",
+                "desc": "Sé testigo de impresionantes atardeceres todas las noches desde nuestra playa. A medida que el cielo se tiñe de vibrantes tonos de rojo, naranja y rosa, será un momento que no querrás perderte."
+            },
+            {
+                "title": "Senderismo en la Selva",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/jru8qrhgzfa8bzjgzsab.avif",
+                "desc": "Aventúrate en la exuberante selva cerca de nuestro hostel. Con tours guiados, explorarás cascadas escondidas, avistarás fauna exótica y descubrirás la belleza natural de Oaxaca."
+            }
+        ]
     }
 }

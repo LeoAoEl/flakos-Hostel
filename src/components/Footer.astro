@@ -13,7 +13,7 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<footer class="bg-sandy text-textColor">
+<footer class="bg-sandy text-textPrimary">
   <Container>
     <div class="flex flex-col items-center text-center">
       <a href="/">
@@ -44,15 +44,6 @@ const translatePath = useTranslatedPath(lang);
         >
           {t("nav.about")}
         </a>
-
-        <a
-          href={translatePath("/gallery/")}
-          class="mx-4 font-semibold text-lg transition-colors duration-300"
-          aria-label="gallery link"
-        >
-          {t("nav.gallery")}
-        </a>
-
         <a
           href={translatePath("/experiences/")}
           class="mx-4 font-semibold text-lg transition-colors duration-300"
@@ -70,9 +61,10 @@ const translatePath = useTranslatedPath(lang);
     >
       <p class="font-semibold text-lg text-center md:text-left">
         Copyright © <span id="current-year"></span> FLAKOS | Powered by <a
-          href="https://astro.build"
+          href="https://www.linkedin.com/in/leonel-elizarraraz/"
           target="_blank"
-          class="text-textColor">Giintape</a
+          class="text-textPrimary transition-all ease-in hover:underline"
+          >Giintape</a
         >
       </p>
 
@@ -80,7 +72,7 @@ const translatePath = useTranslatedPath(lang);
         <a
           target="_blank"
           href="https://api.whatsapp.com/send?phone=+525576209284&text=Tu%20mensaje%20predeterminado"
-          class="mx-2 transition-all text-textColor hover:text-naranja"
+          class="mx-2 transition-all text-textPrimary hover:text-naranja"
           aria-label="WhatsApp"
         >
           <svg
@@ -98,7 +90,7 @@ const translatePath = useTranslatedPath(lang);
         <a
           target="_blank"
           href="https://www.facebook.com/profile.php?id=100072366591090"
-          class="mx-2 transition-all text-textColor hover:text-naranja"
+          class="mx-2 transition-all text-textPrimary hover:text-naranja"
           aria-label="Facebook"
         >
           <svg
@@ -116,7 +108,7 @@ const translatePath = useTranslatedPath(lang);
         <a
           target="_blank"
           href="https://www.instagram.com/hostel_flakos.mx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-          class="mx-2 transition-all text-textColor hover:text-naranja"
+          class="mx-2 transition-all text-textPrimary hover:text-naranja"
           aria-label="instagram"
         >
           <svg

@@ -2,6 +2,8 @@
 import Container from "@components/shared/Container.astro";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import Title from "@components/shared/Title.astro";
+
 import { Image } from "astro:assets";
 import Return from "@components/shared/Return.astro";
 
@@ -19,24 +21,55 @@ export async function getStaticPaths() {
 }
 const { room } = Astro.props;
 const { data, slug } = room;
-const { title, image, type, description, prices, amenities } = data;
+const {
+  title,
+  image,
+  type,
+  description,
+  prices,
+  amenities,
+  guests,
+  beds,
+  dormitories,
+} = data;
 ---
 
 <Layout title={title}>
   <Container>
     <Return />
-    <div class="flex flex-col items-center justify-center">
-      <Image
-        class="w-full md:min-h-80 h-auto object-cover transform transition-all duration-500 ease-in-out"
-        alt="House image"
-        src={image}
-        quality={"low"}
-        loading={"eager"}
-        transition:name={`image ${slug}`}
-      />
-      <h1 class="text-center text-4xl font-bold">{title}</h1>
+    <h1
+      class="md:text-left text-center mb-6 md:mb-0 text-4xl font-bold capitalize text-textPrimary"
+    >
+      {title}
+    </h1>
+    <div
+      class="flex flex-row gap-2 items-center text-lg text-textPrimary px-4 pt-1"
+    >
+      <span class="">{guests} guests</span>
+      <span class="">{beds} beds</span>
+      <span class="">{dormitories} dormitories</span>
+    </div>
+    <div class="flex flex-col">
+      <div class="flex flex-col md:flex-row md:gap-6 items-center">
+        <p class="text-center font-thin md:w-1/2 text-textPrimary prose-2xl">
+          {description}
+        </p>
+        <Image
+          class="w-full md:w-1/2 rounded-lg md:min-h-80 h-auto object-cover transform transition-all ease-in-out"
+          alt="House image"
+          src={image}
+          quality={"mid"}
+          loading={"eager"}
+          transition:name={`image ${slug}`}
+        />
+      </div>
+      <div class="text-textPrimary flex flex-col gap-2 py-8 md:py-0">
+        <span class="text-2xl md:text-4xl font-semibold"
+          >{`Details of the ${type}`}</span
+        >
+      </div>
+
       <p class="text-center text-xl font-thin">{type}</p>
-      <p class="text-center text-xl font-thin">{description}</p>
       <div class="flex flex-col gap-4 items-center">
         <h2 class="text-center text-2xl font-bold">Prices</h2>
         <div class="flex flex-col gap-2 items-center">

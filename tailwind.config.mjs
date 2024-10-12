@@ -19,7 +19,19 @@ module.exports = {
         arribaBG:
           "linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/src/assets/images/arriba.avif')",
         abajoBG:
-          "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('/src/assets/images/abajo.avif')",
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('/src/assets/images/abajo.avif')",
+        AboutTopBG:
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/src/assets/images/AboutTop.avif')",
+        AboutBottomBG:
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('/src/assets/images/AboutBot.avif')",
+        ExpTopBG:
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/src/assets/images/ExpTop.avif')",
+        ExpBottomBG:
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('/src/assets/images/ExpBot.avif')",
+        RoomsTopBG:
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/src/assets/images/RoomsTop.avif')",
+        RoomsBottomBG:
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('/src/assets/images/RoomsBot.avif')",
       },
     },
   },

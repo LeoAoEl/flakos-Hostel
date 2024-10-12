@@ -10,7 +10,7 @@ import {
 import { useState } from "react";
 import { experiencias } from "@constants/experiences";
 
-export const Exp = () => {
+export const Experiencias = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [activeExperience, setActiveExperience] = useState(null); // Usa useState para manejar la experiencia activa
 

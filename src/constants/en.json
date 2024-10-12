@@ -53,10 +53,52 @@
         "bottomTitle": "Experience Flakos",
         "bottomDescription": "From cozy bungalows to eco-friendly glamping, Flakos Hostel provides a diverse range of accommodations. Whether you're here to surf, explore, or unwind, our beachfront location and commitment to sustainability will make your stay unforgettable."
     },
-    "Gallery": {
+    "Experiences": {
         "topTitle": "Experience Flakos Hostel",
         "topDescription": "Explore a variety of activities at Flakos Hostel through our photo gallery. Whether it's surfing, yoga, or sunset walks on Playa Blanca, there's something for everyone. Dive into the adventure, relax by the ocean, and enjoy all that our hostel and surroundings have to offer.",
         "bottomTitle": "A Glimpse of Our Adventures",
-        "bottomDescription": "From morning surf sessions to evening bonfires, our gallery captures the spirit of Flakos Hostel. Take a look at the unforgettable moments and experiences you can be part of during your stay."
+        "bottomDescription": "From morning surf sessions to evening bonfires, our gallery captures the spirit of Flakos Hostel. Take a look at the unforgettable moments and experiences you can be part of during your stay.",
+        "Content": [
+            {
+                "title": "Swimming",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/h7ewzr2xooa6rl1dtxdp.avif",
+                "desc": "Enjoy a refreshing swim in the crystal-clear waters of the Pacific Ocean. Whether you're an expert swimmer or just looking to cool off, our beach offers the perfect spot to relax and enjoy the sea."
+            },
+            {
+                "title": "Surfing",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/di3swu1azqan09damoie.avif",
+                "desc": "Catch the perfect wave at one of the most popular surf spots on the Oaxacan coast. Whether you're a beginner or a pro, you'll find the right conditions to ride the waves and improve your skills."
+            },
+            {
+                "title": "Snorkeling",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/gxg9pxuidem2iqwlz3lf.avif",
+                "desc": "Explore the underwater world with snorkeling. Discover vibrant coral reefs, tropical fish, and other marine life just a few steps from the shore."
+            },
+            {
+                "title": "Yoga on the Beach",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/t2b0sjua7u4uskeb9qhq.avif",
+                "desc": "Start your day with a calming yoga session on the beach. With the sound of the waves and the ocean breeze, it's the perfect way to reconnect with yourself and nature."
+            },
+            {
+                "title": "Beach Volleyball",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/blckyvl3usrp0vjwx7h3.avif",
+                "desc": "Join a friendly game of beach volleyball with other guests. It's a great way to have fun, stay active, and make new friends during your stay."
+            },
+            {
+                "title": "Fishing",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/twdsxy37hjbvrxmfbuvr.avif",
+                "desc": "Experience traditional fishing along the Oaxacan coast. Our local guides will show you the best spots and techniques to catch fish like a pro."
+            },
+            {
+                "title": "Sunset Watching",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/asyojdeatmykofzciyxq.avif",
+                "desc": "Witness breathtaking sunsets every evening from our beach. As the sky turns vibrant shades of red, orange, and pink, it's a moment you won't want to miss."
+            },
+            {
+                "title": "Hiking in the Jungle",
+                "imgSrc": "https://res.cloudinary.com/diiabesnk/image/upload/v1728679457/Flakos/jru8qrhgzfa8bzjgzsab.avif",
+                "desc": "Venture into the lush jungle near our hostel. With guided tours, you'll explore hidden waterfalls, spot exotic wildlife, and discover the natural beauty of Oaxaca."
+            }
+        ]
     }
 }

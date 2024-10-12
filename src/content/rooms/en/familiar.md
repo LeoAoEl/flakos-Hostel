@@ -4,6 +4,9 @@ title: "Familiar"
 image: "../images/glamping2.avif"
 gallery: "familiar"
 type: "glamping"
+guests: "2"
+dormitories: "2"
+beds: "2"
 
 description: "Familiar Glamping is perfect for families seeking a unique outdoor adventure with modern comforts. Spacious enough for the whole family, it provides comfortable bedding and a serene environment, allowing guests to enjoy nature without sacrificing convenience."
 

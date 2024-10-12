@@ -9,6 +9,9 @@ const rooms = defineCollection({
       image: image(),
       gallery: z.string(),
       description: z.string(),
+      guests: z.string(),
+      dormitories: z.string(),
+      beds: z.string(),
       prices: z.object({
         peak: z.string(),
         regular: z.string(),
