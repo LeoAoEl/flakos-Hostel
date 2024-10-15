@@ -23,13 +23,13 @@ export const ui = {
 
 export const routes = {
   en: {
-    index: "home",
+    index: "index",
     rooms: "rooms",
     about: "about",
     experiences: "experiences",
   },
   es: {
-    index: "home",
+    index: "index",
     rooms: "rooms",
     about: "about",
     experiences: "experiences",

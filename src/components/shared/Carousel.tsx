@@ -15,7 +15,6 @@ export default function AutoSwipe({ imageFolder }: Props) {
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    // Cargar dinámicamente las imágenes de la carpeta proporcionada
     const importImages = async () => {
       const imageFiles = import.meta.glob<{ default: ImageMetadata }>(
         "/src/assets/images/*/*"
@@ -24,14 +23,13 @@ export default function AutoSwipe({ imageFolder }: Props) {
         imagePath.startsWith(`/src/assets/images/${imageFolder}/`)
       );
 
-      // Optimizar las imágenes
       const imagePromises = imagePaths.map(async (imagePath) => {
-        const imageModule = await imageFiles[imagePath](); // Resolviendo la promesa
+        const imageModule = await imageFiles[imagePath]();
         const optimizedImage = await getImage({
-          src: imageModule.default, // Aquí se pasa el ImageMetadata resuelto
+          src: imageModule.default,
           width: 1920,
         });
-        return optimizedImage.src; // Retorna el src de la imagen optimizada
+        return optimizedImage.src;
       });
 
       const loadedImages = await Promise.all(imagePromises);
@@ -55,25 +53,24 @@ export default function AutoSwipe({ imageFolder }: Props) {
         pagination={{
           clickable: true,
         }}
-        navigation={{
-          nextEl: ".image-swiper-button-next",
-          prevEl: ".image-swiper-button-prev",
-          disabledClass: "swiper-button-disabled",
-        }}
         modules={[Autoplay, Navigation, Pagination, Keyboard]}
         className="h-96 transition-all ease-in rounded-l-xl"
       >
-        {images.map((src, index) => (
-          <SwiperSlide
-            key={index}
-            className="flex justify-center items-center place-content-center transition-all rounded-xl ease-in"
-          >
-            <img
-              src={src}
-              className="object-cover w-full h-full block rounded-xl"
-            />
-          </SwiperSlide>
-        ))}
+        {images.map((src, index) => {
+          const imageName = src.split("/").pop(); // Obtener el nombre de la imagen
+          return (
+            <SwiperSlide
+              key={index}
+              className="flex justify-center items-center place-content-center transition-all rounded-xl ease-in"
+            >
+              <img
+                src={src}
+                alt={imageName || `Image ${index + 1}`} // Añadir el alt con el nombre de la imagen
+                className="object-cover w-full h-full block rounded-xl"
+              />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </main>
   );

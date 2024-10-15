@@ -38,9 +38,9 @@ export const Experiencias = () => {
               alt={experiencia.title}
               className="h-48 w-full object-cover rounded-md mb-4"
             />
-            <h3 className="text-2xl font-semibold text-textPrimary mb-4">
+            <span className="text-2xl font-semibold text-textPrimary mb-4">
               {experiencia.title}
-            </h3>
+            </span>
             <p className="text-textPrimary">{experiencia.description}</p>
           </div>
         ))}
@@ -77,9 +77,9 @@ export const Experiencias = () => {
           {(onClose) => (
             <>
               <ModalHeader>
-                <h3 className="text-2xl font-semibold text-textPrimary">
+                <span className="text-2xl font-semibold text-textPrimary">
                   {activeExperience?.title}
-                </h3>
+                </span>
               </ModalHeader>
 
               <ModalBody>
