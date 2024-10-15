@@ -1,18 +1,21 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Parallax from "@components/shared/Parallax.astro";
-import Title from "@components/shared/Title.astro";
+import Intro from "@components/shared/Intro.astro";
 import ExpSwipper from "@components/ExpSwipper";
-import { Experiencias } from "@components/experiences/Exp";
 import { getI18N } from "@i18n/index";
+
+
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 const { topTitle, topDescription, bottomTitle, bottomDescription } =
   i18n.Experiences;
 const { Content } = i18n.Experiences;
+const { title, description, url, keywords } = i18n.SEO.experiences;
+const { intro } = i18n.Intro.experiences;
 ---
 
-<Layout title="Experiences App">
+<Layout title={title} description={description} url={url} keywords={keywords}>
   <Parallax
     bgTop="bg-ExpTopBG"
     bgBottom="bg-ExpBottomBG"
@@ -23,7 +26,7 @@ const { Content } = i18n.Experiences;
     bottomTitle={bottomTitle}
     bottomParagraph={bottomDescription}
   >
-    <Experiencias client:visible />
+    <Intro intro={intro} />
     <ExpSwipper client:visible content={Content} />
   </Parallax>
 </Layout>

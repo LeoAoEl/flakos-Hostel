@@ -6,18 +6,32 @@ import Contact from "@components/home/Contact.astro";
 import Cultural from "@components/home/Cultural.astro";
 import Carousel from "@components/shared/Carousel.tsx";
 import Rooms from "@components/home/Rooms.astro";
+import Intro from "@components/shared/Intro.astro";
 
 import { getI18N } from "@i18n/index";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 const { title, description } = i18n.Home;
+const {
+  title: SeoTitle,
+  description: SeoDescription,
+  url,
+  keywords,
+} = i18n.SEO.home;
+const { intro } = i18n.Intro.home;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title={SeoTitle}
+  description={SeoDescription}
+  url={url}
+  keywords={keywords}
+>
   <Parallax showContent topTitle={title} topParagraph={description}>
+    <Intro intro={intro} />
     <Rooms />
     <Mv />
-    <Carousel imageFolder="ejemplo" client:visible />
+    <Carousel imageFolder="ejemplo" client:load />
   </Parallax>
   <Cultural />
   <div class="py-10"></div>

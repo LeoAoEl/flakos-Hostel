@@ -2,8 +2,8 @@
 import Container from "@components/shared/Container.astro";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import Title from "@components/shared/Title.astro";
-
+import PhotoSwipe from "@components/shared/PhotoSwipe.astro";
+import Pricing from "@components/rooms/Pricing.astro";
 import { Image } from "astro:assets";
 import Return from "@components/shared/Return.astro";
 
@@ -63,34 +63,22 @@ const {
           transition:name={`image ${slug}`}
         />
       </div>
-      <div class="text-textPrimary flex flex-col gap-2 py-8 md:py-0">
-        <span class="text-2xl md:text-4xl font-semibold"
-          >{`Details of the ${type}`}</span
+      <div class="text-textPrimary flex flex-col gap-2 py-8">
+        <span class="text-2xl md:text-4xl font-semibold">
+          Amenities & Facilities</span
         >
       </div>
-
-      <p class="text-center text-xl font-thin">{type}</p>
-      <div class="flex flex-col gap-4 items-center">
-        <h2 class="text-center text-2xl font-bold">Prices</h2>
-        <div class="flex flex-col gap-2 items-center">
-          <p class="text-center text-xl font-thin">Peak</p>
-          <p class="text-center text-2xl font-bold">
-            {prices.peak}
-          </p>
-        </div>
-        <div class="flex flex-col gap-2 items-center">
-          <p class="text-center text-xl font-thin">Regular</p>
-          <p class="text-center text-2xl font-bold">
-            {prices.regular}
-          </p>
-        </div>
-        <div class="flex flex-col gap-2 items-center">
-          <p class="text-center text-xl font-thin">Special</p>
-          <p class="text-center text-2xl font-bold">
-            {prices.special}
-          </p>
-        </div>
+      <div class="text-textPrimary flex flex-col gap-2 py-8 md:py-0">
+        <span class="text-2xl md:text-4xl font-semibold">Where You'll Stay</span
+        >
+        <PhotoSwipe imageFolder="ejemplo" />
       </div>
+
+      <Pricing
+        peakPrice={prices.peak}
+        regularPrice={prices.regular}
+        specialPrice={prices.special}
+      />
     </div>
   </Container>
 </Layout>

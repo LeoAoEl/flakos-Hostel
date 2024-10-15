@@ -6,22 +6,31 @@ import Footer from "@components/Footer.astro";
 import { getI18N } from "@i18n/index";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
-const {} = i18n.SEO;
+const { image } = i18n.SEO.home;
 
 interface Props {
   title: string;
+  description?: string;
+  url?: string;
+  keywords?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, url, keywords } = Astro.props as Props;
 ---
 
 <!doctype html>
 <html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.webp" />
+    <meta name="keywords" content={keywords} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
     <meta name="generator" content={Astro.generator} />
     <ViewTransitions />
     <title>{title}</title>

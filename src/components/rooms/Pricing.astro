@@ -1,0 +1,88 @@
+---
+import { getI18N } from "@i18n/index";
+interface Props {
+  regularPrice: string;
+  specialPrice: string;
+  peakPrice: string;
+}
+const { regularPrice, specialPrice, peakPrice } = Astro.props;
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { title, description, peak, regular, special, reserve, reserveNote } =
+  i18n.Rooms.price;
+---
+
+<div class="py-10">
+  <div class="flex flex-col">
+    <span
+      class="text-2xl text-center md:text-4xl font-semibold text-textPrimary capitalize"
+    >
+      {title}
+    </span>
+
+    <p
+      class="max-w-2xl mx-auto mt-4 text-center xl:mt-6 text-textPrimary prose"
+    >
+      {description}
+    </p>
+
+    <div
+      class="grid grid-cols-1 gap-8 mt-6 xl:mt-12 xl:gap-12 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <div
+        class="w-full p-8 space-y-8 text-center border border-azulOcean rounded-lg"
+      >
+        <p class="font-medium uppercase text-textPrimary">{peak}</p>
+
+        <h2 class="text-4xl font-semibold text-textPrimary uppercase">
+          {peakPrice}
+        </h2>
+
+        <p class="font-medium text-textPrimary">{reserveNote}</p>
+
+        <button
+          class="w-full px-4 py-2 mt-10 tracking-wide text-backGround capitalize transition-colors duration-300 transform bg-azulOcean hover:bg-textPrimary rounded-md hover:bg-verde focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80"
+        >
+          {reserve}
+        </button>
+      </div>
+
+      <div
+        class="w-full group p-8 space-y-8 text-center bg-textPrimary rounded-lg hover:scale-110 transition-all ease-in-out cursor-pointer"
+      >
+        <p class="font-medium text-gray-200 uppercase">{regular}</p>
+
+        <h2 class="text-5xl font-bold text-backGround uppercase">
+          {regularPrice}
+        </h2>
+
+        <p class="font-medium text-gray-200">{reserveNote}</p>
+
+        <button
+          class="w-full px-4 py-2 mt-10 tracking-wide text-textPrimary capitalize transition-colors duration-300 transform-all hover:animate-pulse bg-backGround rounded-md focus:outline-none focus:ring focus:ring-opacity-80"
+        >
+          {reserve}
+        </button>
+      </div>
+
+      <div
+        class="w-full p-8 space-y-8 text-center border border-azulOcean rounded-lg"
+      >
+        <p class="font-medium uppercase text-textPrimary">{special}</p>
+
+        <h2 class="text-4xl font-semibold text-textPrimary uppercase">
+          {specialPrice}
+        </h2>
+
+        <p class="font-medium text-textPrimary">{reserveNote}</p>
+
+        <button
+          class="w-full px-4 py-2 mt-10 tracking-wide text-backGround capitalize transition-colors duration-300 transform bg-azulOcean hover:bg-textPrimary rounded-md hover:bg-verde focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80"
+        >
+          {reserve}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

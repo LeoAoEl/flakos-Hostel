@@ -1,7 +1,7 @@
 ---
 slug: "surf-bungalow"
 title: "Surf"
-image: "../images/bungo1.avif"
+image: "../bungo1.avif"
 gallery: "surf"
 type: "bungalow"
 guests: "2"
@@ -11,9 +11,9 @@ beds: "2"
 description: "Our Surf Bungalow offers a cozy and peaceful retreat just steps from the beach. With rustic decor, comfortable beds, and a private bathroom, it's perfect for couples or small families looking to relax and enjoy the beauty of Playa Blanca."
 
 prices:
-  peak: "$120 per night"
-  regular: "$90 per night"
-  special: "$80 per night"
+  peak: "$1200"
+  regular: "$900"
+  special: "$800"
 
 amenities:
   bathrooms: true

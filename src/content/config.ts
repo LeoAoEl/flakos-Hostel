@@ -1,5 +1,4 @@
 import { defineCollection, z } from "astro:content";
-
 const rooms = defineCollection({
   type: "content",
   schema: ({ image }) =>

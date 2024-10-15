@@ -1,5 +1,31 @@
 {
-    "SEO": {},
+    "SEO": {
+        "home": {
+            "title": "Home - FLAKOS Hostel",
+            "description": "Discover FLAKOS Hostel on Playa Blanca, where nature, surf, and shelter dogs come together. Enjoy a relaxing stay near the beach with affordable accommodations and unforgettable experiences.",
+            "url": "/",
+            "image": "/FlakosImg.avif",
+            "keywords": "Hostel, Playa Blanca, Zihuatanejo, surf, nature, dogs, lodging, experiences"
+        },
+        "rooms": {
+            "title": "Rooms - FLAKOS Hostel",
+            "description": "Explore our bungalows and glamping tents at FLAKOS Hostel. Enjoy a peaceful retreat near the ocean, with rustic comfort, eco-friendly stays, and a connection to nature.",
+            "url": "/rooms",
+            "keywords": "Hostel, Playa Blanca, Zihuatanejo, rooms, affordable lodging, nature"
+        },
+        "about": {
+            "title": "About Us - FLAKOS Hostel",
+            "description": "Learn more about FLAKOS Hostel, a place where community, nature, and shelter dogs meet. We offer unique stays on Playa Blanca with a mission to make a difference.",
+            "url": "/about",
+            "keywords": "Hostel, Playa Blanca, Zihuatanejo, mission, dogs, nature"
+        },
+        "experiences": {
+            "title": "Experiences - FLAKOS Hostel",
+            "description": "Discover exciting activities at FLAKOS Hostel, from surfing and snorkeling to yoga and jungle hikes. Enjoy Playa Blanca’s natural beauty and vibrant adventures.",
+            "url": "/experiences",
+            "keywords": "Hostel, Playa Blanca, Zihuatanejo, experiences, nature, surf, snorkeling, dogs"
+        }
+    },
     "Home": {
         "title": "Welcome to Flakos Hostel – Your Paradise Awaits",
         "description": " Playa Blanca, Guerrero, offers affordable stays in bungalows and glamping. Enjoy the beach, explore nature, and be part of our mission to help shelter dogs.",
@@ -45,7 +71,16 @@
         "topTitle": "Explore Your Stay",
         "topDescription": "Explore our rooms and enjoy the beach, nature, and the best of Playa Blanca.",
         "bottomTitle": "Welcome to Your Paradise",
-        "bottomDescription": "We invite you to relax in our serene spaces, where the ocean breeze and tranquility meet."
+        "bottomDescription": "We invite you to relax in our serene spaces, where the ocean breeze and tranquility meet.",
+        "price": {
+            "title": "Price Plans",
+            "description": "At FLAKOS Hostel, we offer flexible pricing based on the season and your stay duration. For longer stays or special dates, be sure to ask about our discounted rates. Enjoy the best of Playa Blanca with accommodations tailored to your needs, whether you're here during the peak season or just looking for a quiet escape.",
+            "peak": "Peak season",
+            "regular": "Regular season",
+            "special": "Special season",
+            "reserveNote": "Per night",
+            "reserve": "Reserve Now"
+        }
     },
     "About": {
         "topTitle": "About Flakos Hostel",
@@ -100,5 +135,19 @@
                 "desc": "Venture into the lush jungle near our hostel. With guided tours, you'll explore hidden waterfalls, spot exotic wildlife, and discover the natural beauty of Oaxaca."
             }
         ]
+    },
+    "Intro": {
+        "home": {
+            "intro": "Welcome to FLAKOS Hostel, your ideal escape on Playa Blanca. Nestled along the Pacific coast of Guerrero, our hostel offers a unique blend of adventure, relaxation, and community. Whether you're looking to surf the waves, explore the lush surroundings, or just enjoy the company of shelter dogs, FLAKOS has something special for everyone."
+        },
+        "about": {
+            "intro": "At FLAKOS Hostel, we believe in creating meaningful experiences that connect travelers with nature, local culture, and community. Our mission goes beyond providing accommodation—we aim to foster a positive impact by supporting local dog shelters and encouraging sustainable tourism. Discover how our values shape the heart of everything we do."
+        },
+        "rooms": {
+            "intro": "Discover the perfect room for your stay at FLAKOS Hostel. Choose between rustic bungalows with private amenities or eco-friendly glamping tents that immerse you in nature. Whether you’re traveling solo, as a couple, or with family, our accommodations offer the ideal setting for rest, comfort, and adventure just steps away from the beach."
+        },
+        "experiences": {
+            "intro": "Immerse yourself in unforgettable experiences at FLAKOS Hostel. From sunrise yoga sessions on the beach to surf lessons and guided jungle hikes, we offer a range of activities that connect you with the natural beauty of Playa Blanca. Relax by the ocean, explore vibrant marine life, or simply unwind with our shelter dogs for an experience unlike any other."
+        }
     }
 }

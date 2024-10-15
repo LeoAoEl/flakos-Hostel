@@ -8,13 +8,12 @@ type Props = {
 const { room } = Astro.props;
 const { slug, data } = room;
 const { title, image, type } = data;
+const currentPath = Astro.url.pathname;
+const isSpanish = currentPath.startsWith("/es");
+const href = isSpanish ? `/es/rooms/${slug}` : `/rooms/${slug}`;
 ---
 
-<a
-  aria-label={title}
-  href={`/rooms/${slug}`}
-  class="rounded-md overflow-hidden shadow-lg"
->
+<a aria-label={title} href={href} class="rounded-md overflow-hidden shadow-lg">
   <div class="relative group">
     <!-- Imagen que cubre todo el contenido -->
     <Image

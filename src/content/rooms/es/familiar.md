@@ -1,7 +1,7 @@
 ---
 slug: "familiar"
 title: "Familiar Glamping"
-image: "../images/glamping2.avif"
+image: "../glamping2.avif"
 gallery: "familiar"
 type: "glamping"
 guests: "2"
@@ -11,9 +11,9 @@ beds: "2"
 description: "Familiar Glamping es perfecto para familias que buscan una aventura al aire libre única con las comodidades modernas. Lo suficientemente espacioso para toda la familia, ofrece camas cómodas y un entorno sereno, permitiendo a los huéspedes disfrutar de la naturaleza sin sacrificar la conveniencia."
 
 prices:
-  peak: "$180 por noche"
-  regular: "$140 por noche"
-  special: "$120 por noche"
+  peak: "$1800"
+  regular: "$1400"
+  special: "$1200"
 
 amenities:
   bathrooms: true

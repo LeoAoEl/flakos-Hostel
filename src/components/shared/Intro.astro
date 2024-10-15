@@ -1,0 +1,14 @@
+---
+interface Props {
+  intro: string;
+}
+const { intro } = Astro.props as Props;
+---
+
+<div class="transition-all">
+  <p
+    class="text-center prose-invert md:text-2xl text-xl text-textPrimary font-thin py-4"
+  >
+    {intro}
+  </p>
+</div>

@@ -4,6 +4,7 @@ import Parallax from "@components/shared/Parallax.astro";
 import Card from "@components/rooms/Card.astro";
 import Title from "@components/shared/Title.astro";
 import { getCollection } from "astro:content";
+import Intro from "@components/shared/Intro.astro";
 import { getI18N } from "@i18n/index";
 interface Props {
   lan: string;
@@ -16,9 +17,16 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 const { title, topTitle, topDescription, bottomTitle, bottomDescription } =
   i18n.Rooms;
+const { intro } = i18n.Intro.rooms;
+const { title: SeoTitle, description, url, keywords } = i18n.SEO.rooms;
 ---
 
-<Layout title="Rooms App">
+<Layout
+  title={SeoTitle}
+  description={description}
+  url={url}
+  keywords={keywords}
+>
   <div class="mx-auto text-center">
     <Parallax
       bgTop="bg-RoomsTopBG"
@@ -31,9 +39,10 @@ const { title, topTitle, topDescription, bottomTitle, bottomDescription } =
       bottomTitle={bottomTitle}
     >
       <Title title={title} />
+      <Intro intro={intro} />
       <section
         aria-label="All Rooms"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10 justify-center items-center md:flex-row flex-col"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-10 justify-center items-center md:flex-row flex-col"
       >
         {rooms.map((room) => <Card room={room} />)}
       </section>
