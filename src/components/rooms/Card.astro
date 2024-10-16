@@ -18,10 +18,12 @@ const href = isSpanish ? `/es/rooms/${slug}` : `/rooms/${slug}`;
     <!-- Imagen que cubre todo el contenido -->
     <Image
       class="w-full md:min-h-80 h-auto object-cover transform transition-all duration-500 ease-in-out group-hover:scale-110"
-      alt="House image"
+      alt={`${title}`}
       src={image}
       quality={"low"}
-      loading={"eager"}
+      widths={[340, 540, 720, 1080]}
+      sizes="(max-width: 340px) 340px, (max-width: 540px) 540px, (max-width: 720px) 720px"
+      loading={"lazy"}
       transition:name={`image ${slug}`}
     />
     <!-- Contenido sobre la imagen, ubicado en la parte inferior -->

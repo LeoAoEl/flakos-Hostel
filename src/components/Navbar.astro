@@ -38,9 +38,11 @@ const translatePath = useTranslatedPath(lang);
               alt="logo"
               src={logo}
               class="w-12 h-auto mr-2"
-              quality={"low"}
+              widths={[64, 128, 256]}
+              sizes="(max-width: 540px) 64px, (max-width: 768px) 128px, 256px"
               loading={"eager"}
-              format="avif"
+              quality={"low"}
+              decoding={"async"}
             />
             <span class="block md:hidden">
               <span class="text-textColor">Hostel FLAKOS</span>

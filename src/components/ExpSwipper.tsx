@@ -60,6 +60,7 @@ export default function ExpSwipper({ content }: Props) {
                     className={`w-full rounded-xl object-cover transition-all ease-in duration-300 ${activeIndex === index ? "opacity-100" : "opacity-90 scale-80"}`}
                     src={item.imgSrc}
                     alt={item.title}
+                    loading={"lazy"}
                   />
                 </div>
 

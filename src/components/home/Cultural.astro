@@ -14,7 +14,12 @@ const { title, body } = i18n.Home.cultural;
   <Image
     src={fondo}
     alt="Beautiful Island"
-    class="w-full h-96 object-cover md:h-[500px] lg:h-[600px]"
+    class="w-full h-96 object-cover md:bg-fixed md:h-[500px] lg:h-[600px]"
+    widths={[640, 1024, 1440, 1920]}
+    sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, (max-width: 1440px) 1440px, 1920px"
+    loading={"lazy"}
+    quality={"mid"}
+    decoding={"async"}
   />
 
   <!-- Contenedor del texto superpuesto -->

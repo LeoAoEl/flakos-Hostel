@@ -56,10 +56,13 @@ const {
         </p>
         <Image
           class="w-full md:w-1/2 rounded-lg md:min-h-80 h-auto object-cover transform transition-all ease-in-out"
-          alt="House image"
+          alt={title}
           src={image}
           quality={"mid"}
+          widths={[640, 778, 1024, 1440, 1920]}
+          sizes="(max-width: 640px) 640px, (max-width: 778px) 778px, (max-width: 1024px) 1024px, (max-width: 1440px) 1440px, 1920px"
           loading={"eager"}
+          decoding="async"
           transition:name={`image ${slug}`}
         />
       </div>

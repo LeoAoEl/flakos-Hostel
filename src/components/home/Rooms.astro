@@ -1,22 +1,23 @@
 ---
 import Title from "@components/shared/Title.astro";
-
+import { Image } from "astro:assets";
+import glamping1 from "@assets/images/home/glamping1.avif";
+import bungalow1 from "@assets/images/home/bungalow1.avif";
 import { getI18N } from "@i18n/index";
+
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 const { title, buttonD, bungalows, glampings } = i18n.Home.rooms;
 const cabins = [
   {
     name: bungalows.title,
-    image:
-      "https://images.unsplash.com/photo-1483190656465-2c49e54d29f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Reemplaza con el path correcto de tu imagen
+    image: bungalow1,
     description: bungalows.description,
     link: "/rooms/",
   },
   {
     name: glampings.title,
-    image:
-      "https://images.unsplash.com/photo-1520260022311-3babdaa7d71e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Reemplaza con el path correcto de tu imagen
+    image: glamping1,
     description: glampings.description,
     link: "/rooms/",
   },
@@ -32,9 +33,14 @@ const cabins = [
         cabins.map((cabin) => (
           <div class="relative group rounded-lg overflow-hidden transition-all ">
             <div class="overflow-hidden rounded-lg shadow-lg">
-              <img
+              <Image
                 src={cabin.image}
                 alt={cabin.name}
+                quality={"low"}
+                loading="lazy"
+                decoding="async"
+                widths={[480, 768, 1024, 1440, 1920]}
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 25vw, (max-width: 1920px) 20vw"
                 class="w-full h-96 object-cover transform transition-all duration-300 group-hover:scale-110"
               />
               <div

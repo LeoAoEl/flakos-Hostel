@@ -25,7 +25,7 @@ const {
 ---
 
 <header
-  class={`bg-center bg-cover bg-no-repeat bg-fixed flex items-center justify-center h-[50vh] md:h-screen mx-auto ${bgTop}`}
+  class={`bg-center bg-cover bg-no-repeat flex items-center justify-center h-[50vh] md:h-screen mx-auto ${bgTop} sm:bg-scroll md:bg-fixed`}
 >
   {
     showContent ? (
@@ -50,7 +50,7 @@ const {
 {
   isBackGround ? (
     <div
-      class={`bg-center bg-cover  bg-no-repeat bg-fixed flex items-center justify-center h-[50vh] md:h-screen mx-auto ${bgBottom}`}
+      class={`bg-center bg-cover bg-no-repeat flex items-center justify-center h-[50vh] md:h-screen mx-auto ${bgBottom} sm:bg-scroll md:bg-fixed`}
     >
       {showContent ? (
         <div class="max-w-screen-xl mx-auto flex flex-col gap-6 px-8 md:px-10 py-4 lg:py-10 leading-tight bg-backGround bg-opacity-40 backdrop-filter backdrop-blur-sm transition-all duration-300 shadow-xl rounded-xl p-4 text-center md:p-8">

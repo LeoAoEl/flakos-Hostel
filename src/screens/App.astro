@@ -8,7 +8,6 @@ import Carousel from "@components/shared/Carousel.tsx";
 import Rooms from "@components/home/Rooms.astro";
 import Intro from "@components/shared/Intro.astro";
 import InstaFeed from "@components/home/InstaFeed.astro";
-import InstagramFeed from "@components/home/Feed.tsx";
 import { getI18N } from "@i18n/index";
 
 const { currentLocale } = Astro;
@@ -36,9 +35,6 @@ const { intro } = i18n.Intro.home;
     <Carousel imageFolder="ejemplo" client:visible />
   </Parallax>
   <Cultural />
-  <div class="py-10">
-    <!-- <InstagramFeed client:visible /> -->
-  </div>
-  <!-- <InstaFeed /> -->
+  <InstaFeed />
   <Contact />
 </Layout>
