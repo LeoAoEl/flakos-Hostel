@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation, Keyboard } from "swiper/modules";
-import { getImage } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
 interface Props {
@@ -15,28 +14,17 @@ export default function AutoSwipe({ imageFolder }: Props) {
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    const importImages = async () => {
-      const imageFiles = import.meta.glob<{ default: ImageMetadata }>(
-        "/src/assets/images/*/*"
-      );
-      const imagePaths = Object.keys(imageFiles).filter((imagePath) =>
-        imagePath.startsWith(`/src/assets/images/${imageFolder}/`)
-      );
+    // Importamos las imágenes usando import.meta.glob con eager: true
+    const imageFiles = import.meta.glob<{ default: ImageMetadata }>(
+      "/src/assets/images/*/*",
+      { eager: true } // Carga las imágenes de manera anticipada
+    );
 
-      const imagePromises = imagePaths.map(async (imagePath) => {
-        const imageModule = await imageFiles[imagePath]();
-        const optimizedImage = await getImage({
-          src: imageModule.default,
-          width: 1920,
-        });
-        return optimizedImage.src;
-      });
+    const filteredImages = Object.entries(imageFiles)
+      .filter(([path]) => path.includes(`/${imageFolder}/`))
+      .map(([_, mod]) => mod.default.src); // Extraemos la ruta optimizada
 
-      const loadedImages = await Promise.all(imagePromises);
-      setImages(loadedImages);
-    };
-
-    importImages();
+    setImages(filteredImages);
   }, [imageFolder]);
 
   return (

@@ -6,6 +6,7 @@ import PhotoSwipe from "@components/shared/PhotoSwipe.astro";
 import Pricing from "@components/rooms/Pricing.astro";
 import { Image } from "astro:assets";
 import Return from "@components/shared/Return.astro";
+import Icons from "@components/rooms/Icons.astro";
 
 export async function getStaticPaths() {
   const rooms = await getCollection("rooms");
@@ -24,7 +25,6 @@ const { data, slug } = room;
 const {
   title,
   image,
-  type,
   description,
   prices,
   amenities,
@@ -32,6 +32,23 @@ const {
   beds,
   dormitories,
 } = data;
+
+// Mapeo de íconos y títulos para las amenities
+const amenitiesMap = {
+  bathrooms: { icon: "bathRoom", title: "Private Bathrooms" },
+  bedrooms: { icon: "bed", title: "Cozy Bedrooms" },
+  parking: { icon: "parking", title: "Free Parking" },
+  kitchen: { icon: "kitchen", title: "Fully-equipped Kitchen" },
+  wifi: { icon: "wifi", title: "High-speed WiFi" },
+  tv: { icon: "tv", title: "Smart TV" },
+  petFriendly: { icon: "pet", title: "Pet Friendly" },
+  coffe: { icon: "coffe", title: "Coffee Available" },
+};
+
+// Filtra las amenities con valor `true`
+const activeAmenities = Object.entries(amenities)
+  .filter(([, value]) => value) // Solo las que tienen valor true
+  .map(([key]) => amenitiesMap[key]); // Mapeamos a íconos y títulos
 ---
 
 <Layout title={title}>
@@ -66,10 +83,19 @@ const {
           transition:name={`image ${slug}`}
         />
       </div>
-      <div class="text-textPrimary flex flex-col gap-2 py-8">
+      <div class="text-textPrimary flex flex-col gap-2 py-10">
         <span class="text-2xl md:text-4xl font-semibold">
           Amenities & Facilities</span
         >
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-4 items-center justify-items-center"
+        >
+          {
+            activeAmenities.map(({ icon, title }) => (
+              <Icons icon={icon} title={title} />
+            ))
+          }
+        </div>
       </div>
       <div class="text-textPrimary flex flex-col gap-2 py-8 md:py-0">
         <span class="text-2xl md:text-4xl font-semibold">Where You'll Stay</span

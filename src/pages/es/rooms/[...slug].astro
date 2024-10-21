@@ -6,6 +6,7 @@ import PhotoSwipe from "@components/shared/PhotoSwipe.astro";
 import Pricing from "@components/rooms/Pricing.astro";
 import { Image } from "astro:assets";
 import Return from "@components/shared/Return.astro";
+import Icons from "@components/rooms/Icons.astro";
 
 export async function getStaticPaths() {
   const rooms = await getCollection("rooms");
@@ -24,7 +25,6 @@ const { data, slug } = room;
 const {
   title,
   image,
-  type,
   description,
   prices,
   amenities,
@@ -32,6 +32,21 @@ const {
   beds,
   dormitories,
 } = data;
+
+const amenitiesMap = {
+  bathrooms: { icon: "bathRoom", title: "Baños privados" },
+  bedrooms: { icon: "bed", title: "Comodas habitaciones" },
+  parking: { icon: "parking", title: "Estacionamiento gratis" },
+  kitchen: { icon: "kitchen", title: "Cocina equipada" },
+  wifi: { icon: "wifi", title: "WiFi de alta velocidad" },
+  tv: { icon: "tv", title: "Smart TV" },
+  petFriendly: { icon: "pet", title: "Pet Friendly" },
+  coffe: { icon: "coffe", title: "Coffee Available" },
+};
+
+const activeAmenities = Object.entries(amenities)
+  .filter(([, value]) => value) // Solo las que tienen valor true
+  .map(([key]) => amenitiesMap[key]); // Mapeamos a íconos y títulos
 ---
 
 <Layout title={title}>
@@ -70,6 +85,15 @@ const {
         <span class="text-2xl md:text-4xl font-semibold">
           Servicios e Instalaciones</span
         >
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-4 items-center justify-items-center"
+        >
+          {
+            activeAmenities.map(({ icon, title }) => (
+              <Icons icon={icon} title={title} />
+            ))
+          }
+        </div>
       </div>
       <div class="text-textPrimary flex flex-col gap-2 py-8 md:py-0">
         <span class="text-2xl md:text-4xl font-semibold">Donde estarás</span>

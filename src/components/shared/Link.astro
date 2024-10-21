@@ -9,14 +9,17 @@ interface Props {
 const { href, name } = Astro.props;
 const currentPath = Astro.url.pathname;
 
-// Detectar el idioma de la URL
-const currentLang = getLangFromUrl(new URL(currentPath, Astro.url.origin));
+// Detectar el idioma actual de la URL
+const currentLang = getLangFromUrl(new URL(currentPath, Astro.url));
 
-// Función para generar la ruta correcta
+// Generar la ruta traducida, evitando duplicar prefijos
 const translatePath = useTranslatedPath(currentLang);
-const localizedHref = translatePath(href, currentLang);
+const normalizedHref = href.startsWith(`/${currentLang}`)
+  ? href
+  : `/${currentLang}${href}`;
+const localizedHref = currentLang === "en" ? href : normalizedHref;
 
-// Verificar si la ruta actual es una ruta activa
+// Verificar si la ruta es activa (rooms dinámico incluido)
 const isActive =
   currentPath === localizedHref ||
   (currentPath.includes("/rooms") && localizedHref.includes("/rooms"));

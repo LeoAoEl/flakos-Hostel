@@ -1,0 +1,19 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+  icon: string;
+  title: string;
+}
+const { icon, title } = Astro.props;
+---
+
+<button
+  class="group flex items-center justify-center flex-col transition-all ease-in-out group"
+>
+  <Icon
+    size={32}
+    name={icon}
+    class="group-hover:scale-110 ease-in transition-all"
+  />
+  {title}</button
+>
