@@ -19,7 +19,7 @@ amenities:
   bathrooms: true
   bedrooms: true
   parking: true
-  kitchen: false
+  kitchen: true
   wifi: true
   tv: true
   petFriendly: true

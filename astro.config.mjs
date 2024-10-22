@@ -15,5 +15,5 @@ export default defineConfig({
     routing: { prefixDefaultLocale: false },
     fallback: { es: "en" },
   },
-  devToolbar: { enabled: true },
+  devToolbar: { enabled: false },
 });
